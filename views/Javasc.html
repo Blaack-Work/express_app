@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="../CSS/Javasc.css">
+</head>
+
+<body>
+    <div class="grinav">
+        <nav class="flex row al-cen">
+            <img id="logo" src="../static/Pb_O_Wsm.png" alt="BW logo">
+            <ul class="flex row">
+                <li id="li1"><a id="a1" href="../HTML/HTML.html" target="_blank">Html</a></li>
+                <li id="li2"><a id="a2" href="../HTML/CSS.html" target="_blank">CSS</a></li>
+                <li id="li3"><a id="a3" href="../HTML/Javasc.html" target="_blank">JavaScript</a></li>
+            </ul>
+        </nav>
+        <li id="timeclock" class="flex row al-cen "><span id="times"></span></li>
+    </div>
+    <div class="glowbar">
+    </div>
+    <div class="container swi-case bor-red flex dir-col">
+        <h5>Using Switch Case as IF then Else statement</h5>
+        <p>const cups = 47;</p>
+        <p>switch (cups) {</p>
+        <p>case 45:</p>
+        <p>console.log("The value of cups is 45");</p>
+        <p>break;</p>
+        <p></p>
+        <p>case 46:</p>
+        <p>console.log("The value of cups is 46");</p>
+        <p>break;</p>
+        <p></p>
+        <p>case 47:</p>
+        <p>console.log("The value of cups is 47");</p>
+        <p>break;</p>
+        <p></p>
+        <p>case 48:</p>
+        <p>console.log("The value of cups is 48");</p>
+        <p>break;</p>
+        <p></p>
+        <p>default:</p>
+        <p>console.log("The value of cups is none of 45, 46, 47, 48")</p>
+        <p>break;</p>
+        <p>};</p>
+    </div>
+    <div class="container func bor-green">
+        <h5>Writing a Function</h5>
+        <p>function greet(name){</p>
+        <p>....console.log(name + " is a good boy");</p>
+        <p>}</p>
+        <p>let name = "Harry";</p>
+        <p>let name1 = "Shubham";</p>
+        <p>let name2 = "Rohan";</p>
+        <p>let name3 = "Sagar";</p>
+        <p>greet(name);</p>
+        <p>greet(name1);</p>
+        <p>greet(name2);</p>
+        <p>greet(name3);</p>
+    </div>
+    <div class="container for bor-blue">
+        <h5>For Loop</h5>
+        <p>let i = 0;</p>
+        <p>for (i = 0; i < 3; i++) {</p>
+                <p> console.log(i);</p>
+                <p>}</p>
+    </div>
+    <div class="loops container bor-red">
+        <h5>For loop in an array </h5>
+        <p>let friends = ["Rohan", "Sanjeev", "Deepti", "Pooja", "SkillF"];</p>
+        <p>for (let index = 0; index < friends.length; index++) {</p>
+                <p>console.log("Hello friend, " + friends[index]);</p>
+                <p> }</p>
+                <h5>Use for each for array rather than for loop</h5>
+                <p>friends.forEach(function f(element){</p>
+                <p>console.log("Hello Friend, " + element + " to modern JavaScript");</p>
+                <p>});
+
+                </p>
+
+                <h4>One more thing...</h4>
+                <p>for (element of friends){</p>
+                <p>console.log("Hello Friend, " + element + " to modern JavaScript again");</p>
+                <p>}</p>
+    </div>
+    <div class="container object bor-green">
+        <h4>Object</h4>
+        <h5>Iterating through an Object</h5>
+        <p>let employee = {</p>
+        <p>name: "Harry",</p>
+        <p>salary: 2,</p>
+        <p>channel: "CWH"</p>
+        <p>}</p>
+        <h5>Use this loop to iterate over objects in JavaScript</h5>
+        <p>for (key in employee) {</p>
+        <p>console.log(`The ${key} of employee is ${employee[key]}`);</p>
+        <p>}</p>
+    </div>
+    <div class="while bor-blue container">
+        <h5>While Loop</h5>
+        <p>let i = 0;</p>
+        <p>while (i < 4) {</p>
+                <p>console.log(`${i} is less than 4`);</p>
+                <p>i++;</p>
+                <p>}</p>
+                <h5>Do While Loop</h5>
+                <p>let j = 34;</p>
+                <p>do {</p>
+                <p>console.log(`${j} is less than 4 and we are inside do while loop`);</p>
+                <p>j++;</p>
+                <p>} while (j < 4);</p>
+    </div>
+    <div class="dom container bor-red">
+        <h5>Navigating the DOM </h5>
+        <p>let main = document.getElementById('main');</p>
+        <p>console.log(main);</p>
+
+        <p>let nav = document.getElementById('nav');</p>
+        console.log(nav);
+
+        <p>let containers = document.getElementsByClassName('container');</p>
+        <p>console.log(containers);</p>
+
+        <p>let sel = document.querySelector('container’);</p>
+        <p>console.log("Selector returns ", sel)</p>
+
+        <p>let sel = document.querySelectorAll('#nav');</p>
+        <p>console.log("Selector returns ", sel)</p>
+
+    </div>
+    <div class="events container bor-green">
+        <h5>Events</h5>
+        <p>An HTML web page has finished loading</p>
+        <p>An HTML input field was changed</p>
+        <p>An HTML button was clicked</p>
+        <br>
+        <p>Onchange- An HTML element has been changed</p>
+        <p>Onclick- The user clicks an HTML element</p>
+        <p>Onmouseover- The user moves the mouse over an HTML element</p>
+        <p>Onmouseout-The user moves the mouse away from an HTML element</p>
+        <p>Onkeydown- The user pushes a keyboard key</p>
+        <p>Onload- The browser has finished loading the page</p>
+        <br>
+        <p>{/* <button id="btn" onclick="toggleHide()">Show/Hide</button></p>
+        <p>function toggleHide() {</p>
+        <p> let btn = document.getElementById('btn');</p>
+        <p> let para = document.getElementById('para');</p>
+        <p> if (para.style.display != 'none') {</p>
+        <p> para.style.display = 'none';</p>
+        <p> }</p>
+        <p> else {</p>
+        <p> para.style.display = 'block';</p>
+        <p> }</p>
+        <p>} */}</p>
+        <br>
+        <p>When mouse goes over paragraph, it gives an alert </p>
+        <p>let para = document.getElementById('para');</p>
+        <p>para.addEventListener('mouseover', function run() {</p>
+        <p>alert('Mouse Inside')</p>
+        <p>});</p>
+        <br>
+
+        <p>para.addEventListener('mouseout', function run(){</p>
+        <p>alert('Mouse now went outside')</p>
+        <p>});</p>
+    </div>
+    <div class="timeout container bor-blue">
+        <h5>TIMEOUT</h5>
+        <p>The setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds.
+            This function is only executed once. Use the clearTime() method to prevent the function running.</p><br>
+        <p>function greet(){</p><br>
+        <p>console.log("Hello Good Morning ");</p><br>
+        <p>}</p>
+        <p>setTimeout(greet, 5000);</p><br>
+        <p></p>
+        <p>It calls a function or evaluates an expression at specified intervals in milliseconds. It will continue
+            calling the function until clearInterval() function is called or the window is closed.</p><br>
+        <p>setInterval(greet, 1000, "Harry", "Good Night"); It also passes the params after time</p>
+    </div>
+    <div class="date container bor-red">
+        <h5>Date</h5>
+        <p>console.log("This is date and time tutorial");</p>
+        <p>let now = new Date();</p>
+        <p>console.log(now);</p>
+        <p></p><br>
+        <p>let dt = new Date(1000);</p>
+        <p>console.log(dt);</p>
+        <p></p><br>
+        <p>let newDate = new Date("2029-09-30");</p>
+        <p>console.log(newDate)</p>
+        <p></p><br>
+        <p>let newDate = new Date(year, month, date, hours, minutes, seconds, milliseconds);</p>
+        <p>let newDate = new Date(3020, 4, 6, 9, 3, 2, 34);</p>
+        <p>console.log(newDate);</p>
+        <p></p><br>
+        <p>let yr = newDate.getFullYear();</p>
+        <p>console.log("The year is ", yr);</p>
+        <p></p><br>
+        <p>let dat = newDate.getDate();</p>
+        <p>console.log("The date is ", dat);</p>
+        <p></p><br>
+        <p>let month = newDate.getMonth();</p>
+        <p>console.log("The month is ", month);</p>
+        <p></p><br>
+        <p>let hours = newDate.getHours();</p>
+        <p>console.log("The hours is ", hours);</p>
+        <p></p><br>
+        <p>newDate.setDate(8);</p>
+        <p>newDate.setMinutes(29);</p>
+        <p>console.log(newDate)</p>
+        <p>setInterval(updateTime, 1000);</p>
+        <p></p><br>
+        <p>function updateTime() {</p>
+        <p> time.innerHTML = new Date();</p>
+        <p>}</p>
+        <br>
+        <br>
+        <p>&lt;span id="times">&lt;/span></p>
+        <p>function updateTime() {</p>
+        <p>    timern =new Date()</p>
+        <p>    times.innerHTML = `${timern.getHours()}:${timern.getMinutes()}:${timern.getSeconds()}`;</p>
+        <p>    console.log(times.innerHTML)</p>
+        <p>}</p>
+        <p>setInterval(updateTime, 500);</p>
+    </div>
+    <div class="arrow container bor-green">
+        <h5>Arrow Function</h5>
+        <p>Arrow function</p>
+        <p>let greet = ()=> {</p>
+        <p>console.log('Good morning');</p>
+        <p>}</p>
+        <p></p><br>
+        <p>let greet = () => console.log('Good morning');</p>
+        <p></p><br>
+        <p></p><br>
+        <p>let sum2 = (a, b)=>{</p>
+        <p>return a+b;</p>
+        <p>};</p>
+        <p></p><br>
+        <p>let sum2 = (a, b) => a+b;</p>
+        <p>let half = a => a/2;</p>
+        <p></p><br>
+        <p>function greet() {</p>
+        <p>console.log('Good morning');</p>
+        <p>}</p>
+        <p></p><br>
+        <p>greet();</p>
+        <p>setTimeout(() => {</p>
+        <p>console.log("We are inside settimeout");</p>
+        <p>}, 3000);</p>
+        <p></p><br>
+        <p>let obj1={</p>
+        <p>greeting: "Good Morning",</p>
+        <p>names: ["Harry", "Rohan", "SkillF", "DjKhiladi"],</p>
+        <p>speak(){</p>
+        <p>this.names.forEach((student)=>{</p>
+        <p>console.log(this.greeting + " Kukdoo Koo " + student);</p>
+        <p>});</p>
+        <p>}</p>
+        <p>}</p>
+        <p>obj1.speak();</p>
+    </div>
+    <div class="mathobj container bor-blue">
+        <h5>Math Object</h5>
+        <p>Printing the Math Object</p>
+        <p>let m = Math;</p>
+        <p>console.log(m)</p>
+<p></p><br>
+        <p>Printing the constants from Math Object</p>
+        <p>console.log("The value of Math.E is ", Math.E)</p>
+        <p>console.log("The value of Math.PI is ", Math.PI)</p>
+        <p>console.log("The value of Math.LN2 is ", Math.LN2)</p>
+        <p>console.log("The value of Math.SQRT1_2 is ", Math.SQRT1_2)</p>
+        <p>console.log("The value of Math.LOG2E is ", Math.LOG2E)</p>
+<p></p><br>
+        <p>Printing the Functions from Math Object</p>
+        <p>let a = 34.64534;</p>
+        <p>let b = 89;</p>
+<p></p><br>
+        <p>console.log("The value of a and b is ", a, b);</p>
+        <p>console.log("The value of a and b rounded is ", Math.round(a), Math.round(b));</p>
+<p></p><br>
+        <p>console.log("3 raised to the power of 2 is ", Math.pow(3, 2))</p>
+        <p>console.log("2 raised to the power of 12 is ", Math.pow(2, 12))</p>
+        <p>console.log("1 raised to the power of 2 is ", Math.pow(1, 2))</p>
+<p></p><br>
+        <p>console.log("Square root of 36 is ", Math.sqrt(36))</p>
+        <p>console.log("Square root of 64 is ", Math.sqrt(64))</p>
+        <p>console.log("Square root of 50 is ", Math.sqrt(50))</p>
+<p></p><br>
+        <p>Ceil and floor</p>
+        <p>console.log("5.8 rounded up to nearest integer is ", Math.ceil(5.8))</p>
+        <p>console.log("5.8 rounded down to nearest integer is ", Math.floor(5.8))</p>
+<p></p><br>
+        <p>Abs function</p>
+        <p>console.log("Absolute value of 5.66 is ", Math.abs(5.66))</p>
+        <p>console.log("Absolute value of -5.66 is ", Math.abs(-5.66))</p>
+<p></p><br>
+        <p>Trinonometric Functions</p>
+        <p>console.log("The value of sin(pi) is ", Math.sin(Math.PI/2))</p>
+        <p>console.log("The value of tan(pi) is ", Math.tan(Math.PI/2))</p>
+        <p>console.log("The value of cos(pi) is ", Math.cos(Math.PI/2))</p>
+<p></p><br>
+        <p>Min and max functions</p>
+        <p>console.log("Minimum value of 4, 5, 6 is ", Math.min(4,5, 6));</p>
+        <p>console.log("Minimum value of 14, 5, 16 is ", Math.min(14,5, 16));</p>
+        <p>console.log("Maximum value of 4, 5, 6 is ", Math.max(4,5, 6));</p>
+        <p>console.log("Maximum value of 14, 5, 16 is ", Math.max(14,5, 16));</p>
+<p></p><br>
+        <p>Generating a random number</p>
+        <p>let r = Math.random();</p>
+        <p>Random number b/w (a, b) = a + (b-a)*Math.random()</p>
+        <p>let a1 = 50;</p>
+        <p>let b1 = 60;</p>
+        <p>let r50_60 = a1 + (b1-a1)*Math.random();</p>
+        <p>console.log("The random number is ", r)</p>
+        <p>console.log("The random number is ", r50_60)</p>
+    </div>
+    <div class="json container bor-red">
+        <h5>JSON</h5>
+        <p>let jsonObj = {</p>
+        <p>    name: "Harry",</p>
+        <p>    channel: "CWH",</p>
+        <p>    friend: "Rohan Das",</p>
+        <p>    food: "Bhindi"</p>
+        <p>} </p>
+        <p>console.log(jsonObj);</p>
+        <p>let myJsonStr = JSON.stringify(jsonObj);</p>
+        <p>console.log(myJsonStr);</p>
+<p></p><br>
+        <p>myJsonStr = myJsonStr.replace('Harry', 'Larry');</p>
+        <p>console.log(myJsonStr)</p>
+<p></p><br>
+        <p>newJsonObj = JSON.parse(myJsonStr);</p>
+        <p>console.log(newJsonObj)</p>
+
+    </div>
+</body>
+<script>
+    function updateTime() {
+        timern =new Date()
+        times.innerHTML = `${timern.getHours()}:${timern.getMinutes()}:${timern.getSeconds()}`;
+        console.log(times.innerHTML)
+    }
+    setInterval(updateTime, 500);
+</script>
+</html>

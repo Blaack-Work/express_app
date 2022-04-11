@@ -1,0 +1,411 @@
+:root {
+    --black-col: #15191f;
+    --light-col: #e3ecf3;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.cen {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.al-cen {
+    align-items: center;
+}
+
+.ju-cen {
+    justify-content: center;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5vw;
+    background-color: var(--light-col);
+}
+
+div {
+    margin: 20px 15px;
+}
+
+.border-red {
+    border: 3.5px solid #ffb700d3;
+    border-radius: 12px;
+    box-shadow: 7px 7px 3px 1px green;
+    /* box-shadow: x y blur-radius spread-readius color; */
+}
+
+.border-green {
+    border: 3.5px solid green;
+    border-radius: 5px;
+    box-shadow: 7px 7px 3px 1px blue;
+    /* box-shadow: x y blur-radius spread-readius color; */
+}
+
+.border-blue {
+    border: 3.5px solid blue;
+    border-radius: 5px;
+    box-shadow: 7px 7px 3px 1px red;
+    /* box-shadow: x y blur-radius spread-readius color; */
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.line-height {
+    line-height: 8vh;
+}
+
+/* NAVIGATION BAR  */
+.grinav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#timeclock {
+    justify-content: end;
+    margin: 0px 0px 0px 0px;
+    color: var(--black-col);
+}
+
+#times {
+    border: 2px solid var(--light-col);
+    background-color: var(--light-col);
+    margin: 0px 2vw 0px 0px;
+    padding: 5px 20px 5px 20px;
+    font-weight: bold;
+    border-radius: 200px;
+}
+
+.glowbar {
+    display: block;
+    background-color: #ff7700;
+    box-sizing: border-box;
+    width: 0%;
+    margin: 0px 0px 0px 0px;
+    position: fixed;
+    height: 4px;
+    animation-name: fill2;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fill1 {
+    from {
+        width: 0%;
+        background-color: gold;
+    }
+
+    to {
+        width: 100%;
+        background-color: #db9b00;
+    }
+}
+
+@keyframes fill2 {
+    0% {
+        width: 0%;
+        background-color: rgb(255, 217, 0);
+    }
+
+    90% {
+        /* width: 70%; */
+        background-color: #ff7700;
+    }
+
+    100% {
+        width: 100%;
+        background-color: #ff7700;
+    }
+}
+
+nav, .grinav {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0px;
+    padding: 5px 5px;
+    background-color: var(--black-col);
+    z-index: 2;
+
+}
+
+nav a {
+    text-decoration: none;
+    background-color: var(--black-col);
+    color: var(--light-col);
+    padding: 4px 10px;
+    border: 2px;
+    border-radius: 10px;
+}
+
+nav a:hover {
+    color: #15191f;
+    /* ff7700 */
+    transition-property: background-color;
+    /* transition-property: color; */
+
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    background-color: var(--light-col);
+}
+
+
+#li1 {
+    margin-left: 4vw;
+}
+
+#a1 {
+    margin: 0px 1.5vw;
+}
+
+#a2 {
+    margin: 0px 1.5vw;
+}
+
+#a3 {
+    margin: 0px 1.5vw;
+}
+
+#a4 {
+    margin: 0px 1.5vw;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+#logo {
+    width: 3vw;
+    border: 2px;
+    border-radius: 100px;
+    margin: 5px 0px 0px 15px;
+}
+
+/* NAVIGATION BAR ENDS  */
+
+
+/* MAIN HEADING  */
+.heading {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.ap {
+    grid-column-start: 2;
+    grid-column-end: 2;
+
+    margin: 100px 0px 0px 100px;
+
+}
+
+/* If there is a horizontal scroll bar, you can disable it by the following code:{
+box-sizing: border-box;
+width: 100%; 
+instead of width: 100vw;
+This should solve the problem} */
+.heading::before {
+    box-sizing: border-box;
+    content: "";
+    height: 100vh;
+    /* background-color: var(--black-col); */
+    background: url(../static/Pb_O_W.png) no-repeat center center/cover;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+.AiO {
+    font-family: 'Bahnschrift', 'Arial', 'Calibri', 'Times New Roman', Times, serif;
+    font-size: 2.5vw;
+    margin: 40px 0px;
+    color: orange;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    /* text-align: left; */
+    top: 100px;
+    margin: 277px 0px 0px 150px;
+}
+
+.breaker {
+    display: none;
+}
+
+/* @media only screen and (max-width:2600px) {
+    .heading::before {
+        box-sizing: border-box;
+        content: "";
+        height: 100vh;
+        background-color: var(--black-col);
+        background: url(../static/Pb_O_W.png) no-repeat center center/cover;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+    }
+} */
+
+.smbot {
+    text-align: center;
+    display: inline;
+    color: var(--light-col);
+}
+
+/* MAIN HEADING ENDS  */
+
+/* LISTS SECTION  */
+div ul {
+    margin: 0px 25px;
+}
+
+ol li {
+    margin: 0px 40px;
+}
+
+ol {
+    border: 2px solid blue;
+    border-radius: 5px;
+    text-align: center;
+    margin: 4px 0px;
+    width: 100;
+}
+
+.text-cen {
+    text-align: center;
+}
+
+ol li {
+    margin-left: 40px;
+}
+
+/* LISTS SECTION ENDS */
+
+/* FORMS STARTED */
+
+input {
+    display: block;
+}
+
+option {
+    background-color: var(--black-col);
+    color: var(--light-col);
+    height: 50px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+select {
+    width: 85px;
+    background-color: var(--black-col);
+    color: var(--light-col);
+    height: 30px;
+    border: 2px solid var(--black-col);
+    border-radius: 6px;
+}
+
+.button {
+    height: 25px;
+    width: 25px;
+    border-radius: 100px;
+}
+
+.checkbox {
+    height: 25px;
+    width: 25px;
+}
+
+/* FORMS ENDED */
+h4, h5 {
+
+    text-shadow: 2px 2px 2px var(--black-col);
+    text-align: center;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+}
+
+.box {
+    background-color: green;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    animation-name: harry1;
+    /* animation-name: harry2; */
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    /* z-index: -1; */
+    transition: all 1s ease-in-out;
+}
+
+.box:hover {
+    transform: rotate(3600000000deg);
+}
+
+
+
+@keyframes harry1 {
+    from {
+        width: 200px;
+    }
+
+    to {
+        width: 1400px;
+    }
+}
+
+@keyframes harry2 {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+
+    25% {
+        top: 250px;
+        left: 0px;
+    }
+
+    75% {
+        top: 250px;
+        left: 250px;
+    }
+
+    100% {
+        top: 0px;
+        left: 250px;
+    }
+}

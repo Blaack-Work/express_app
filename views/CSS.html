@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="../public/stylesheets/CSS.css">
+    <!-- <script src="../JS/contact.js"></script> -->
+</head>
+</head>
+
+<body>
+    <div class="grinav">
+        <nav class="flex row al-cen">
+            <img id="logo" src="../static/Pb_O_Wsm.png" alt="BW logo">
+            <ul class="flex row">
+                <li id="li1"><a id="a1" href="../HTML/HTML.html" target="_blank">Html</a></li>
+                <li id="li2"><a id="a2" href="../HTML/CSS.html" target="_blank">CSS</a></li>
+                <li id="li3"><a id="a3" href="../HTML/Javasc.html" target="_blank">JavaScript</a></li>
+            </ul>
+        </nav>
+        <li id="timeclock" class="flex row al-cen "><span id="times"></span></li>
+    </div>
+    <div class="glowbar">
+    </div>
+    <div class="mediaquery border-red">
+        <h5 class="cen">The code for media query is</h5>
+        <p>
+            @media only screen and (min-width: 300px) and (max-width:500px) {<br>
+            #box-2{<br>
+            display: block;<br>
+            background-color: blueviolet;<br>
+            }<br>
+            }<br>
+        </p>
+
+    </div>
+    <div class="selector border-green">
+        <h5 class="cen">
+            Attribute & nth child pseudo Selectors
+        </h5>
+        <p>
+            input[type='text'] {<br>
+            padding: 23px;<br>
+            border: 2px solid red;<br>
+            }<br>
+            input[type='email'] {<br>
+            color: yellow;<br>
+            border: 4px solid black;<br>
+            }<br>
+            li:nth-child(3){<br>
+            color: cyan;<br>
+            }<br>
+            li:nth-child(3n+3) {<br>
+            color: red;<br>
+            }<br>
+            li:nth-child(even) {<br>
+            background-color: yellow;<br>
+            }<br>
+            a[target='_self'] {<br>
+            font-size: 14px;<br>
+            color: rgb(13, 22, 151);<br>
+            }<br>
+        </p>
+    </div>
+    <div class="box-shadow border-blue">
+        <h5 class="cen">Box Shadow and Text Shadow</h5>
+        <p>box-shadow: x y blur-radius spread-readius color;<br>
+            box-shadow: 7px 7px 3px 1px blue;
+        </p>
+    </div>
+    <div class="container animation border-red">
+        <h5>Animation & Key frames</h5>
+
+        <div class="box cen">
+            This is a box
+        </div>
+        <div class="animations-code">
+            <p>
+                animation-name: harry1;<br>
+                animation-duration: 4s;<br>
+                animation-iteration-count: 10;<br>
+                @keyframes harry1 {<br>
+                from {<br>
+                width: 200px;<br>
+                }<br>
+
+                to {<br>
+                width: 1400px;<br>
+                }<br>
+                }<br>
+                DETAILS<br>
+                animation-fill-mode: alternate; */<br>
+                animation-timing-function: ease-in-out; */<br>
+                animation-delay: 3s; */<br>
+                animation-direction: reverse; */<br>
+
+                These properties can be set using this shorthand */<br>
+                animation: animation-name animation-duration animation-timing-function animation-delay
+                animation-iteration-count animation-fill-mode; */<br>
+                animation: harry 5s ease-in 1s 12 backwards; */<br>
+                Further Explaination<br>
+                @keyframes harry2 {<br>
+                0%{<br>
+                top:0px;<br>
+                left:0px;<br>
+                }<br>
+                25%{<br>
+                top: 250px;<br>
+                left: 0px;<br>
+                }<br>
+                75%{<br>
+                top: 250px;<br>
+                left: 250px;<br>
+                }<br>
+                100%{<br>
+                top: 0px;<br>
+                left: 250px;<br>
+                }<br>
+
+            </p>
+        </div>
+
+
+    </div>
+    <div class="transitions border-blue">
+        <h5>Transitions </h5>
+        <p>
+            #box{<br>
+            display: flex;<br>
+            height: 200px;<br>
+            width: 200px;<br>
+            background-color: red;<br>
+            justify-content: center;<br>
+            align-items: center;<br>
+            transition-property: background-color;<br>
+            transition-duration: 1s;<br>
+            transition-timing-function: ease-in-out;<br>
+            transition-delay: 2s; <br>
+
+            Transition short hand property in one line <br>
+            transition: background-color 1s ease-in-out 2s; <br>
+            transition: all 1s ease-in-out .3s;<br>
+            }<br>
+
+            #box:hover{<br>
+            background-color: green;<br>
+            height: 400px;<br>
+            width: 400px;<br>
+            border-radius: 100px;<br>
+            font-size: 45px;<br>
+
+            }<br>
+
+        </p>
+    </div>
+    <div class="transform border-blue">
+        .box {<br>
+        background-color: green;<br>
+        width: 250px;<br>
+        height: 250px;<br>
+        position: relative;<br>
+        animation-name: harry1;<br>
+        /* animation-name: harry2; */<br>
+        animation-duration: 4s;<br>
+        animation-iteration-count: 1;<br>
+        /* z-index: -1; */<br>
+        transition: all 1s ease-in-out;<br>
+        }<br>
+        .box:hover{<br>
+        transform: rotate(3600000000deg);<br>
+        }<br>
+        There is translation and skew properties as well.
+    </div>
+    <div class="grids border-green">
+        <h5>Grids Tutorial</h5>
+        <p>
+            display: grid;<br>
+            grid-template-columns: 1fr 1fr;<br>
+            grid-template-rows: 1fr 1fr;<br>
+            grid-column-start: 2;<br>
+            grid-column-end: 2;<br>
+            grid-column-start: 1;<br>
+            grid-column-end: 3;<br>
+            grid-row-start: 1;<br>
+            grid-row-end: 2;<br>
+            grid-gap:1000px;<br>
+            grid-template-rows: repeat(10,4fr); Create 10 colums of 4 fr<br>
+            grid-column: 1/ span 3;
+            grid-row: 1/ span 3;
+        </p>
+        <hr>
+        <h5>grid-template-columns: repeat(5, 1fr);</h5>
+        <h5>grid-template-rows: repeat(4, 1fr);</h5>
+        <div class="grid">
+            <div class="box1">This is box-1</div>
+            <div class="box1">This is box-2</div>
+            <div class="box1">This is box-3</div>
+            <div class="box1">This is box-4</div>
+            <div class="box1">This is box-5</div>
+            <div class="box1">This is box-6</div>
+            <div class="box1">This is box-7</div>
+            <div class="box1">This is box-8</div>
+            <div class="box1">This is box-9</div>
+            <div class="box1">This is box-10</div>
+        </div>
+        <hr>
+        <h5>grid-column: 1 / span 3;</h5>
+        <div class="container-grid">
+            <div class="box2">Item-1</div>
+            <div class="box2">Item-2</div>
+            <div class="box2">Item-3</div>
+            <div class="box2">Item-4</div>
+            <div class="box2">Item-5</div>
+            <div class="box2">Item-6</div>
+            <div class="box2">Item-7</div>
+            <div class="box2">Item-8</div>
+            <div class="box2">Item-8</div>
+            <div class="box2">Item-8</div>
+            <div class="box2">Item-8</div>
+            <div class="box2">Item-8</div>
+            <div class="box2">Item-8</div>
+            <div class="box2">Item-8</div>
+            <div class="box2">Item-8</div>
+        </div>
+        <h5>grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));</h5>
+        <div class="container-grid2">
+
+            <div class="box3">Item-1</div>
+            <div class="box3">Item-2</div>
+            <div class="box3">Item-3</div>
+            <div class="box3">Item-4</div>
+            <div class="box3">Item-5</div>
+            <div class="box3">Item-6</div>
+            <div class="box3">Item-7</div>
+            <div class="box3">Item-8</div>
+            <div class="box3">Item-9</div>
+            <div class="box3">Item-10</div>
+            <div class="box3">Item-11</div>
+            <div class="box3">Item-12</div>
+            <div class="box3">Item-13</div>
+        </div>
+        <hr>
+        <h4>grid-template-areas: <br>
+            'navbar navbar navbar navbar' <br>
+            'section section section aside'<br>
+            'footer footer footer footer ';</h4>
+        <div class="container-grid3">
+            <div id="navbar" class="item">
+
+                Home About Contact Us
+            </div>
+            <div id="section" class="item">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi consequuntur quos accusamus iste
+                omnis aut illo expedita facere veniam, sapiente ullam possimus suscipit.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, rerum assumenda facere et voluptas
+                praesentium dolores sequi dolorem dolorum labore vel asperiores, odit, saepe soluta quibusdam beatae
+                quasi dignissimos minima! Obcaecati facere ducimus, beatae illo laboriosam officiis esse a rerum
+                quibusdam. Autem laboriosam, veniam vel, voluptates, dolor voluptatem voluptatum fugiat unde tenetur
+                quia ad dolorum tempore quas corporis! Ut distinctio inventore dolorum quis odio totam aliquam
+                exercitationem! Debitis animi ipsum unde obcaecati sed, fugiat autem iste provident odio, illum
+                asperiores, temporibus a veniam. Est eveniet sint recusandae ducimus mollitia accusamus doloremque
+                dignissimos, iusto enim commodi, illo, sequi odit! Saepe doloremque labore aperiam incidunt pariatur.
+                Necessitatibus mollitia expedita reprehenderit accusamus in animi officia voluptates. Similique
+                voluptates ad nam, dolor vero nisi eos, ut eum illum cumque molestiae quod incidunt voluptatum,
+                provident itaque dolorum nesciunt. Nisi omnis necessitatibus voluptatum cupiditate doloribus, magni
+                quasi iste quos deleniti voluptas qui non ad, aliquid quam numquam in consequuntur possimus? Debitis,
+                ipsum officiis libero maiores hic natus? Iste ipsam facere fugit quasi distinctio quos sit voluptatem
+                quas adipisci veniam incidunt possimus aperiam maiores inventore eaque consectetur nam nulla, magni
+                labore minima consequuntur! Quae molestiae distinctio eaque ipsam ab sit quis tenetur veritatis, id
+                voluptatem recusandae, optio quas itaque ex possimus dignissimos enim nihil. Exercitationem accusantium
+                quis fugiat quos, cumque molestiae architecto iure modi reprehenderit, eveniet doloribus hic aliquid
+                quaerat deleniti magni impedit itaque inventore esse aspernatur qui. Sequi omnis laborum est eaque
+                quaerat perspiciatis perferendis possimus nemo maxime, libero unde officia voluptates iusto accusantium
+                quos mollitia eos porro odit, distinctio consectetur in. Magni, quam accusamus quibusdam eligendi nobis
+                nulla, eveniet nesciunt hic perspiciatis maxime repudiandae excepturi, animi consequuntur. Nam tempore
+                exercitationem ad laboriosam libero quis inventore iste minus illo totam? Rem, eligendi excepturi
+                ducimus similique vero doloribus eveniet quas doloremque. Doloribus tenetur voluptatibus quo sit
+                deserunt laboriosam doloremque. Eaque aliquam error incidunt? Illo rem quibusdam numquam omnis aliquam
+                ipsam, doloremque sequi mollitia nobis harum eius suscipit officiis labore, fugit nemo quidem autem ex,
+                eos quisquam iusto. Maxime totam debitis quis provident pariatur fugiat aliquam, alias praesentium?
+                Laudantium sint, aliquam porro obcaecati numquam at explicabo totam harum iure debitis asperiores quod
+                cumque neque dolores accusantium, tempore ipsa quo quae perspiciatis aperiam natus reprehenderit dolorum
+                quam. Consectetur, laborum voluptatibus ullam libero voluptas perspiciatis maiores eligendi id dolorum
+                suscipit perferendis blanditiis, dignissimos nemo consequuntur voluptate tempora velit numquam, eos
+                maxime optio voluptatem odio. Sequi et tempore a quos praesentium.
+            </div>
+            <div id="aside" class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas soluta expedita
+                quis!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam beatae laudantium nihil aliquam
+                quisquam, suscipit, tempora maxime excepturi vitae animi voluptatem dignissimos cumque nobis obcaecati,
+                eius temporibus voluptas? Numquam ullam atque cum minima quod deleniti quae qui! Possimus doloribus ea
+                odio explicabo vel. Nemo saepe suscipit ipsa eum tenetur quidem laborum alias corrupti! Ad doloribus
+                voluptas laudantium fugiat odit temporibus, minima in assumenda cupiditate nihil aliquid sit ullam porro
+                esse tempore neque! Error et illo sit deleniti voluptates. Exercitationem fuga quos, autem ea explicabo
+                minima animi impedit, corporis obcaecati qui esse fugiat a illum dicta quam quis, non repellendus saepe
+                dolores sequi vero eveniet ipsum! Qui enim soluta non eveniet pariatur totam ipsa alias vitae, eum minus
+                rerum facere magnam nesciunt inventore exercitationem praesentium voluptatibus blanditiis mollitia ipsum
+                illo asperiores animi quas distinctio veniam! Sit enim numquam, consequuntur eius inventore sint quidem
+                praesentium iusto, commodi itaque eligendi atque expedita perferendis quam quae quod eaque totam culpa
+                quia sed ad. Error nisi voluptates doloribus ab, enim porro tenetur? Nulla eligendi minus deleniti omnis
+                quae blanditiis, tempora voluptas incidunt beatae obcaecati? Facilis animi delectus quaerat, rem quidem
+                totam iure cum maiores dolore ut magni. Consequuntur cum magnam dolor officiis, harum ipsum blanditiis
+                dicta amet iusto quos, sed eaque ipsa atque provident voluptas rem. Nesciunt minima esse, facilis
+                recusandae quod adipisci magnam assumenda necessitatibus! Dolor blanditiis exercitationem quas vero
+                officia quia ipsam, vel maiores distinctio minus autem eveniet consequuntur magni. Id nostrum, sunt cum
+                nesciunt dolore quisquam eligendi dolorem recusandae, beatae quis eveniet, aut velit itaque neque
+                necessitatibus quasi laudantium commodi illo adipisci minima! Id suscipit quae omnis. Veritatis,
+                temporibus. Delectus, eligendi! Magnam itaque veritatis reprehenderit eos odit, explicabo recusandae
+                incidunt vitae voluptate saepe hic blanditiis pariatur officia. Necessitatibus suscipit quo nostrum!
+                Expedita nostrum dolore perspiciatis id, itaque repudiandae tempora doloribus amet quas, dicta quam! Nam
+                dolorem voluptatum incidunt iure cum eos enim voluptate, iusto voluptatibus modi repudiandae quo, ipsum,
+                quos qui soluta. Eos architecto, adipisci rem ipsam unde reiciendis officiis eveniet, suscipit eaque
+                quae tempora omnis earum ipsum sapiente nostrum neque itaque consequuntur maiores. Saepe officia dolores
+                inventore! Natus et aliquid dolorem eius delectus, architecto dolor non atque beatae aperiam ipsum
+                numquam quae deserunt voluptates voluptate maxime, cum quis ex quia quaerat placeat illo. Distinctio,
+                atque, adipisci officia alias excepturi facere iure minus non voluptas dolore quidem architecto impedit
+                nostrum optio delectus expedita possimus hic, repudiandae iste ipsa eveniet tempore. Impedit,
+                cupiditate.
+            </div>
+            <footer id="footer" class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident quo
+                libero cumque.
+            </footer>
+        </div>
+        <hr>
+
+        <span class="body1">
+            <div class="container-grid4 ">
+                <nav class="bdr navi">
+                    <span>Home</span>
+                    <span>About</span>
+                    <span>Services</span>
+                    <span>Contact</span>
+                </nav>
+                <section class="bdr secti">
+                    <h2>Learn CSS in hindi</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque nemo cupiditate distinctio
+                        et expedita. Delectus quaerat accusamus inventore tenetur error quam minus, provident fugit
+                        repellat necessitatibus? Architecto itaque quidem sequi blanditiis, facere accusantium
+                        hic.lorem122 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi dignissimos ut
+                        rerum aut. Fuga delectus suscipit debitis libero. Itaque, ipsum dignissimos consequatur repellat
+                        distinctio enim dolorem, facilis esse dolorum illum earum aliquid numquam blanditiis ipsam
+                        reiciendis iure nobis quo cum maiores aperiam pariatur. Quas aliquam, quae non rerum, architecto
+                        eligendi blanditiis officia placeat dolor soluta explicabo. Voluptatem tenetur perspiciatis
+                        neque quidem ducimus velit id explicabo, illo magni quis voluptatum. Tempora quod, dicta illum
+                        ratione quo at dolores cupiditate aperiam laboriosam amet sequi quaerat similique incidunt eius
+                        deleniti deserunt accusamus eligendi nemo est veritatis fugiat ducimus! Modi ut vel et nihil
+                        asperiores mollitia obcaecati, neque accusantium corrupti, quisquam voluptatem rem? Possimus
+                        tempore et fugit cumque culpa aliquam doloremque odio hic, cum, minima nostrum!</p>
+                </section>
+                <aside class="asi bdr">
+                    <h1>More about us</h1>
+                </aside>
+            </div>
+            <footer class="foot bdr">Copyright CodeWithHarry 2020</footer>
+        </span >
+    </div>
+</body>
+<script>
+    function updateTime() {
+        timern =new Date()
+        times.innerHTML = `${timern.getHours()}:${timern.getMinutes()}:${timern.getSeconds()}`;
+        console.log(times.innerHTML)
+    }
+    setInterval(updateTime, 500);
+</script>
+</html>
